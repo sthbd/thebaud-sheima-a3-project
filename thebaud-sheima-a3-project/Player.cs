@@ -23,7 +23,7 @@ namespace MohawkGame2D
         public int newHeight;
 
         // Jumping variables
-        public float velocityY = 0f;  // Vertical velocity
+        public float velocityY = 0f;  // 
         public float gravity = 500f;  // Gravity force (pulls player down)
         public float jumpForce = -300f;  // How high the player jumps (negative for upward movement)
         public bool isJumping = false;  // Whether the player is currently jumping
@@ -58,9 +58,9 @@ namespace MohawkGame2D
             // Check if the player is on the ground
             if (yPosition >= groundLevel)
             {
-                yPosition = groundLevel;  // Ensure the player stays on the ground level
+                yPosition = groundLevel;   
                 isOnGround = true;
-                velocityY = 0f;  // Stop downward velocity once the player is on the ground
+                velocityY = 0f;  
             }
             else
             {
@@ -70,8 +70,8 @@ namespace MohawkGame2D
             // Handle Jumping and Gravity
             if (isJumping && isOnGround)  // Can only jump if on the ground
             {
-                velocityY = jumpForce;  // Apply the jump force upwards
-                isJumping = false;  // Reset the jumping flag
+                velocityY = jumpForce;  
+                isJumping = false;  
             }
 
             // Apply gravity if not on the ground
@@ -83,8 +83,8 @@ namespace MohawkGame2D
             // Update the yPosition based on velocity
             yPosition += velocityY * Time.DeltaTime;
 
-            // Keep xPosition fixed (no horizontal movement)
-            xPosition = 0f;  // Ensure horizontal position stays the same
+            // Keep xPosition fixed 
+            xPosition = 0f;  
         }
 
         /// <summary>

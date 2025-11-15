@@ -31,8 +31,8 @@ namespace MohawkGame2D
             player.LoadTextures();
 
             // Add obstacles and load their textures
-            obstacles.Add(new Obstacle("small", 100));  // xPosition = 300 for small meteorite
-            obstacles.Add(new Obstacle("big", 200));    // xPosition = 500 for big meteorite
+            obstacles.Add(new Obstacle("small", 100));  // 
+            obstacles.Add(new Obstacle("big", 200));    // 
 
             foreach (var obstacle in obstacles)
             {
@@ -56,10 +56,9 @@ namespace MohawkGame2D
             if (gradientPositionX < -800)
                 gradientPositionX = 0f;
 
-            // Draw everything in proper order
-            DrawScrollingGradient();    // Draw background first
-            DrawObstacles();            // Draw obstacles on top of background
-            player.Draw();              // Draw player on top of everything
+            DrawScrollingGradient();    
+            DrawObstacles();            
+            player.Draw();              
         }
 
         public void DrawObstacles()

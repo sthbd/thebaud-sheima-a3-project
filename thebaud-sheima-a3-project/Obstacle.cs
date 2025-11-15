@@ -20,7 +20,7 @@ namespace MohawkGame2D
     public string obstacleType; // Type of the obstacle: "small" or "big"
 
     // Ground level constant (same as player's ground level)
-    private const float groundLevel = 400f;
+    public const float groundLevel = 400f;
 
     public Obstacle(string type, float x)
     {

@@ -60,7 +60,7 @@ namespace MohawkGame2D
         /// <param name="x">The X position to draw at.</param>
         /// <param name="y">The Y position to draw at.</param>
         public static void Draw(Texture2D texture, float x, float y)
-            => Draw(texture, new Vector2(x, y));
+            => Draw(texture, new Vector2(x, y), new Vector2(x,y));
 
         /// <summary>
         ///     Draw a <paramref name="texture"/> graphic to the screen at
@@ -68,7 +68,7 @@ namespace MohawkGame2D
         /// </summary>
         /// <param name="texture">The texture to draw.</param>
         /// <param name="position">The position to draw at.</param>
-        public static void Draw(Texture2D texture, Vector2 position)
+        public static void Draw(Texture2D texture, Vector2 position, Vector2 vector2)
         {
             Raylib.DrawTextureEx(texture, position, Rotation, Scale, Tint);
         }
